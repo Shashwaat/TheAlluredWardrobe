@@ -87,7 +87,14 @@ body{
     top: 0;
     left: 0;
 }
+#mobile{
+    display: none;
+    align-items: center;
+}
 
+#close{
+    display: none;
+}
 #navbar{
     display: flex;
     align-items: center;
@@ -237,17 +244,22 @@ body{
     box-shadow: 5px 5px 54px #527464; ;
 }
 
+
 #product1 .pro img{
     width: 100%;
     border-radius: 20px;
 }
+#product1  img{
+    width: 100%;
+    border-radius: 20px;
+}
 
-#product1 .pro .des{
+#product1 .pro .des {
     text-align: start;
     padding: 10px 0;
 }
 
-#product1 .pro .des h5{
+#product1 .pro .des  h5{
     padding-top: 7px;
     color: #1a1a1a;
     font-size: 14px;
@@ -258,14 +270,14 @@ body{
     color: rgb(243, 181, 25);
 }
 
-#product1 .pro .des h4{
+#product1 .pro  .des h4{
     padding-top:7px;
     font-size: 15px;
     font-weight:700;
     color: #020202;
 }
 
-#product1 .pro .Cart{
+#product1 .pro  .Cart{
     width:40px;
     height:40px;
     line-height: 40px;
@@ -499,3 +511,125 @@ background-position: center;
       flex: 2 0px;
     }
   }
+
+
+  /* media queries for homepage ipad  */
+  @media(max-width:799px){
+    .section-p1{
+        padding: 40px 40px;
+    }
+    #navbar {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        position: fixed;
+        top: 0;
+        right: -300px;
+        height: 100vh;
+        width:300px;
+        background-color: #000000;
+        box-shadow: #97820a;
+        padding: 80px 0 0 10px;
+transition: 0.5s;
+    }
+#navbar.active{
+    right: 0px;
+}
+    #navbar li{
+        margin-bottom: 25px;
+    }
+
+    #mobile{
+        display: flex;
+        align-items: center;
+    }
+
+    #mobile i{
+        color: #97820a;
+        font-size: 24px;
+        padding-left: 20px;
+    }
+
+    #close{
+        display: initial;
+        position: absolute;
+        top: 30px;
+        left: 30px;
+        color: #97820a;
+        font-size: 24px;
+    }
+
+    #lg-bag{
+        display: none;
+    }
+
+    #hero{
+        height: 90vh;
+        padding: 0 80px;
+        background-position: top 30% right 30%;
+      
+    }
+
+    
+#feature{
+    justify-content: center;
+}
+
+#feature .fe-box{
+    
+    margin: 15px 15px;
+
+}
+#product1 .pro-container{
+  justify-content: center;
+}
+
+#banner{
+    height: 30vh;
+}
+#banner h2{
+    color: rgb(3, 11, 70);
+    font-weight: 800;
+    font-size: 30px;
+}
+
+#sm-banner .banner-box{
+    min-width: 100%;
+    height: 38vh;
+}
+  }
+
+@media (max-width:477px){
+    .logo{
+        height: 50px;
+    }
+    .section-p1{
+        padding: 20px;
+    }
+    #header{
+        padding: 10px 30px;
+    }
+    
+    h1{
+        font-size: 38px;
+    }
+    h2{
+        font-size: 32px;
+    }
+
+    #hero{
+        padding: 0 20px;
+        background-position: 55%;
+    }
+    #feature{
+        justify-content: space-between;
+    }
+     #feature .fe-box{
+    width: 155px;
+    margin: 0 0 15px 0;
+     }
+
+     
+
+}
